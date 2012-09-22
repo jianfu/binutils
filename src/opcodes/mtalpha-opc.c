@@ -538,19 +538,32 @@ const struct alpha_opcode mtalpha_opcodes[] =
   /* fputs: FP version below. */
   { "release",    OPR (0x01,0x28), BASE, { RA, ZB,  ZC } },
   { "detach",     OPR (0x01,0x28), BASE, { RA, ZB,  ZC } }, /* alias */
-
+  
+  /* FT */
+  { "pair",       OPR (0x01,0x29), BASE, { RA,  RB,  ZC} },
+  { "rmtwr",      OPR (0x01,0x2A), BASE, { RA,  ZB,  ZC} },
+  
+	
   { "sync",       OPR (0x01,0x30), BASE, { RA, ZB,   RC } },
   { "getg",       OPR (0x01,0x32), BASE, { RA, IDXB, RC } },
   /* fgetg: FP version below. */
   { "gets",       OPR (0x01,0x33), BASE, { RA, IDXB, RC } },
   /* fgets: FP version below. */
-
+   
+		
   { "allocate",   OPR (0x01,0x40), BASE, { RA, RB,  RC } },
   { "allocate",   OPRL(0x01,0x40), BASE, { RA, LIT, RC } },
   { "allocate/s", OPR (0x01,0x41), BASE, { RA, RB,  RC } },
   { "allocate/s", OPRL(0x01,0x41), BASE, { RA, LIT, RC } },
   { "allocate/x", OPR (0x01,0x43), BASE, { RA, RB,  RC } },
   { "allocate/x", OPRL(0x01,0x43), BASE, { RA, LIT, RC } },
+	 /* FT */
+	{ "allocate/r",   OPR (0x01,0x50), BASE, { RA, RB,  RC } },
+	{ "allocate/r",   OPRL(0x01,0x50), BASE, { RA, LIT, RC } },
+	{ "allocate/rs", OPR (0x01,0x51), BASE, { RA, RB,  RC } },
+	{ "allocate/rs", OPRL(0x01,0x51), BASE, { RA, LIT, RC } },
+	{ "allocate/rx", OPR (0x01,0x53), BASE, { RA, RB,  RC } },
+	{ "allocate/rx", OPRL(0x01,0x53), BASE, { RA, LIT, RC } },
 
   { "creba/a",    OPR (0x01,0x61), BASE, { RA, RB,  ZC } },
   { "creba/a",    OPRL(0x01,0x61), BASE, { RA, LIT, ZC } },
