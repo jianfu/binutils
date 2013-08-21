@@ -3574,7 +3574,7 @@ s_alpha_registers(int dummy ATTRIBUTE_UNUSED)
   alpha_align (6, NULL, alpha_insn_label, 0);
   emit_control_word(frag_more(4));
   md_number_to_chars(frag_more(4), arg, 4);
-  function_offset += 8;
+  function_offset += 12;
 
   /* Update global current register counts */
   register_counts = counts;
